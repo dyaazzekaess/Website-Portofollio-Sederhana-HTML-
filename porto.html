@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MUHAMMAD DIAZ EKA SAPUTRA — Portofolio</title>
+  <meta name="description" content="Portofolio MUHAMMAD DIAZ EKA SAPUTRA, mahasiswa sistem informasi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EEF2F6;
+      --surface: #FFFFFF;
+      --ink: #15213B;
+      --muted: #55627A;
+      --line: #CBD5E1;
+      --accent: #2747E8;
+      --accent-ink: #FFFFFF;
+      --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+      --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0F1626;
+        --surface: #172036;
+        --ink: #E8EDF7;
+        --muted: #9AA8C2;
+        --line: #2B3857;
+        --accent: #7C9BFF;
+        --accent-ink: #0F1626;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* Navigasi */
+    header.nav {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    .nav .brand { font-family: var(--display); font-weight: 800; text-decoration: none; }
+    .nav ul { display: flex; gap: 22px; list-style: none; }
+    .nav ul a { text-decoration: none; color: var(--muted); font-weight: 500; }
+    .nav ul a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero { padding: 88px 0 72px; }
+    .hero h1 {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(3rem, 11vw, 7.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+    .hero .role {
+      margin-top: 28px;
+      font-size: 1.25rem;
+      max-width: 34ch;
+      color: var(--muted);
+    }
+    .hero .actions { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 12px 22px; border-radius: 6px;
+      font-weight: 500; text-decoration: none; border: 2px solid var(--accent);
+    }
+    .btn.primary { background: var(--accent); color: var(--accent-ink); }
+    .btn.ghost { color: var(--accent); }
+    .btn:hover { filter: brightness(1.08); }
+
+    /* Section */
+    section { padding: 64px 0; border-top: 1px solid var(--line); }
+    section h2 {
+      font-family: var(--display);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+    .about p { max-width: 62ch; }
+    .about p + p { margin-top: 16px; }
+
+    /* Keahlian */
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+    .skills li {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+
+    /* Proyek */
+    .projects { list-style: none; }
+    .project {
+      display: grid; grid-template-columns: 1fr auto; gap: 8px 24px;
+      padding: 26px 0; border-bottom: 1px solid var(--line);
+    }
+    .project:first-child { padding-top: 0; }
+    .project h3 { font-family: var(--display); font-size: 1.35rem; font-weight: 700; }
+    .project p { grid-column: 1; color: var(--muted); max-width: 60ch; }
+    .project .stack { grid-column: 1; font-size: 0.95rem; color: var(--accent); font-weight: 500; }
+    .project a.link {
+      grid-column: 2; grid-row: 1; align-self: start;
+      color: var(--accent); font-weight: 500;
+    }
+
+    /* Kontak */
+    .contact p { max-width: 50ch; margin-bottom: 20px; }
+    .contact .email {
+      font-family: var(--display); font-weight: 700;
+      font-size: clamp(1.4rem, 4.5vw, 2.4rem);
+      color: var(--accent); word-break: break-all;
+    }
+    .socials { margin-top: 24px; display: flex; gap: 20px; flex-wrap: wrap; }
+
+    footer { padding: 32px 0 48px; color: var(--muted); font-size: 0.95rem; border-top: 1px solid var(--line); }
+
+    @media (max-width: 600px) {
+      .nav ul { gap: 14px; font-size: 0.95rem; }
+      .project { grid-template-columns: 1fr; }
+      .project a.link { grid-column: 1; grid-row: auto; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top">NK</a>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#keahlian">Keahlian</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap">
+
+      <!-- GANTI: nama dan deskripsi singkat -->
+      <div class="hero">
+        <h1>MUHAMMAD DIAZ<br>EKA SAPUTRA</h1>
+        <p class="role">Mahasiswa Sistem Informasi, Fakultas Teknik, Universitas Negeri Surabaya.</p>
+        <div class="actions">
+          <a class="btn primary" href="#proyek">Lihat proyek</a>
+          <a class="btn ghost" href="#kontak">Hubungi saya</a>
+        </div>
+      </div>
+
+      <!-- GANTI: ceritakan dirimu -->
+      <section id="tentang" class="about">
+        <h2>Tentang saya</h2>
+        <p>Saya mahasiswa semester 1 di Universitas Negeri Surabaya. Saya belajar pemrograman, basis data, dan sistem operasi, lalu menerapkannya lewat proyek kecil.</p>
+        <p>Saat ini saya fokus memperdalam HTML, dan Python. Saya terbuka untuk magang dan kerja sama proyek.</p>
+      </section>
+
+      <!-- GANTI: daftar keahlian -->
+      <section id="keahlian">
+        <h2>Keahlian</h2>
+        <ul class="skills">
+          <li>HTML</li>
+          <li>Python</li>
+          <li>Git &amp; GitHub</li>
+          <li>VS Code</li>
+          <li>Kerja tim</li>
+        </ul>
+      </section>
+
+      <!-- GANTI: proyek-proyekmu. Salin blok <li> untuk menambah proyek. -->
+      <section id="proyek">
+        <h2>Proyek</h2>
+        <ul class="projects">
+          <li class="project">
+            <h3>Kalkulator Tarif Parkir</h3>
+            <a class="link" href="#" target="_blank" rel="noopener">Lihat kode</a>
+            <p>Program Python yang menghitung tarif parkir berdasarkan jenis kendaraan dan lama parkir.</p>
+            <span class="stack">Python</span>
+          </li>
+          <li class="project">
+            <h3>Website Portofolio</h3>
+            <a class="link" href="#" target="_blank" rel="noopener">Lihat kode</a>
+            <p>Halaman portofolio pribadi yang responsif dan mendukung mode gelap.</p>
+            <span class="stack">HTML, CSS, JavaScript</span>
+          </li>
+          <li class="project">
+            <h3>Judul Proyek Berikutnya</h3>
+            <a class="link" href="#" target="_blank" rel="noopener">Lihat kode</a>
+            <p>Jelaskan masalah yang diselesaikan proyek ini dan peranmu di dalamnya.</p>
+            <span class="stack">Teknologi yang dipakai</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- GANTI: email dan tautan sosial -->
+      <section id="kontak" class="contact">
+        <h2>Kontak</h2>
+        <p>Punya proyek, lowongan magang, atau sekadar ingin berdiskusi? Kirim pesan lewat email.</p>
+        <a class="email" href="mailto:email@contoh.com">26051214201@mhs.unesa.ac.id</a>
+        <div class="socials">
+          <a href="https://github.com/username" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/username" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="tahun"></span> MUHAMMAD DIAZ EKA SAPUTRA. Dibuat dengan HTML.</div>
+  </footer>
+
+  <script>
+    document.getElementById("tahun").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
